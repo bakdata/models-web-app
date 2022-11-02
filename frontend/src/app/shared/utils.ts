@@ -153,9 +153,8 @@ export function getPredictorExtensionSpec(
         spec.storageUri = storageUri.value;
       }
     }
+    return spec;
   }
-
-  return spec;
 }
 
 export function getExplainerContainer(explainer: ExplainerSpec): V1Container {
