@@ -126,10 +126,8 @@ export function getPredictorExtensionSpec(
   predictor: PredictorSpec,
 ): PredictorExtensionSpec {
   if (predictor.model) {
-    if (Object.values(PredictorType).includes(predictor.model?.modelFormat.name as PredictorType)) {
-      const spec = predictor.model
-      return spec;
-    }
+    const spec = predictor.model
+    return spec;
   } else {
     for (const predictorType of Object.values(PredictorType)) {
       if (predictorType in predictor) {
